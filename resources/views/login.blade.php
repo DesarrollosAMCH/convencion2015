@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>INSPINIA | Login 2</title>
+    <title>AMCH | Convención 2015</title>
 
     <link href="css/back/bootstrap.min.css" rel="stylesheet">
     <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
@@ -75,11 +75,17 @@
                                     <option value="3">Club K2</option>
                                     <option value="4">Club Republica de Francia</option>
                                 </optgroup>
-                                <optgroup label="Zona Poniente">
-                                    <option>Club Rejas Sur</option>
-                                    <option>Club Ararat</option>
-                                    <option>Club K2</option>
-                                    <option>Club Republica de Francia</option>
+                                <optgroup label="Otra Zona">
+                                    <option>Club 1</option>
+                                    <option>Club 2</option>
+                                    <option>Club 3</option>
+                                    <option>Club 4</option>
+                                </optgroup>
+                                <optgroup label="3a Zona">
+                                    <option>Club 5</option>
+                                    <option>Club 6</option>
+                                    <option>Club 7</option>
+                                    <option>Club 8</option>
                                 </optgroup>
                             </select>
                         </div>
