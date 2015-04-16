@@ -40,8 +40,8 @@
         }
         img{
             display: block;
-            margin: 0 auto 10px;
-            width: 350px;
+            margin: 20px auto 10px;
+            width: 300px;
         }
     </style>
 
