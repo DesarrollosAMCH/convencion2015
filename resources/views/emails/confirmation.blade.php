@@ -34,9 +34,7 @@
 
         Por motivos de seguridad, solo tu puedes completar la activación ingresando al siguiente link: <br/>
 
-        <?php $link = "localhost:8000/activate/". $token;?>
-
-        <a href="http://localhost:8000/activate/{{ $token }}/{{ $id_club }}/{{ $email }}">Enlace de Activación</a>
+        <a href="http://convencionamch.conquistadoresclub.cl/activate/{{ $token }}/{{ $id_club }}/{{ $email }}">Enlace de Activación</a>
 
         <br/>
 
