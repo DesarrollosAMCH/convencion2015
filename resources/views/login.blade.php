@@ -67,15 +67,19 @@
                         <div class="form-group">
                             <!--<input type="email" class="form-control" placeholder="Username" required="">-->
                             <select class="chosen-select form-control" required>
-                                @foreach($clubes as $club)
-                                    <option> {{ $club->NOMBRE }}</option>
-                                @endforeach
+                                @if(count($clubes))
+                                    @foreach($clubes as $club)
+                                        <option> {{ $club->NOMBRE }}</option>
+                                    @endforeach
+                                @else
+                                    <option value="">No hay Clubes Activos</option>
+                                @endif
                             </select>
                         </div>
                         <div class="form-group">
                             <input type="password" class="form-control" placeholder="Escriba su Contraseña" required="">
                         </div>
-                        <button type="submit" class="btn btn-primary block full-width m-b">Login</button>
+                        <button type="submit" class="btn btn-primary block full-width m-b">Entrar</button>
 
                         <div class="msg my_hidden">
                             <p class="bg-warning">
@@ -83,14 +87,14 @@
                             </p>
                         </div>
 
-                        <a href="#">
+                        <!--<a href="#">
                             <small>Forgot password?</small>
-                        </a>
+                        </a>-->
 
                         <p class="text-muted text-center">
                             <small>¿Tu club no aparece en el listado?</small>
                         </p>
-                        <a class="btn btn-sm btn-white btn-block" href="http://www.conquis.cl/" target="_blank">Registra tu Club</a>
+                        <a class="btn btn-sm btn-white btn-block" href="/register">Activa tu Club</a>
                     </form>
                     <!--<p class="m-t">
                         <small>Inspinia we app framework base on Bootstrap 3 &copy; 2014</small>

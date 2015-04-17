@@ -16,6 +16,15 @@ Route::get('/', 'WelcomeController@index');
 Route::get('home', 'HomeController@index');
 
 Route::get('login', 'LoginController@index');
+Route::post('register', 'LoginController@activate');
+Route::get('activate/{token}/{club}/{email}', 'LoginController@activate2');
+
+Route::get('register', 'LoginController@register');
+
+Route::get('register', function(){
+    abort(404);
+});
+
 
 Route::controllers([
 	'auth' => 'Auth\AuthController',

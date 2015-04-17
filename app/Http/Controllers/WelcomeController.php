@@ -30,8 +30,17 @@ class WelcomeController extends Controller {
 	 */
 	public function index()
 	{
+        $oUser = new \App\User;
         $oClub = new \App\Club;
-        $clubes = $oClub::all();
+        $clubes_ids = array();
+
+        $users = $oUser::where('ACTIVO', '=', 1)->get();
+
+        foreach($users as $user){
+            $clubes_ids[] = $user->CLUB_ID;
+        }
+
+        $clubes = $oClub::whereIn("ID", $clubes_ids)->get();
 
 		return view('login', array('clubes'=>$clubes));
 	}
