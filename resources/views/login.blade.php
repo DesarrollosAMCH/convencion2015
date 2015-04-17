@@ -51,7 +51,6 @@
 
     <div class="loginColumns animated fadeInDown">
         <div class="row">
-
             <div class="col-md-12">
                 <h1 class="font-bold">Convención de Conquistadores AMCH 2015</h1>
             </div>
@@ -68,25 +67,9 @@
                         <div class="form-group">
                             <!--<input type="email" class="form-control" placeholder="Username" required="">-->
                             <select class="chosen-select form-control" required>
-                                <option>Seleccione su Club</option>
-                                <optgroup label="Zona Poniente">
-                                    <option value="1">Club Rejas Sur</option>
-                                    <option value="2">Club Ararat</option>
-                                    <option value="3">Club K2</option>
-                                    <option value="4">Club Republica de Francia</option>
-                                </optgroup>
-                                <optgroup label="Otra Zona">
-                                    <option>Club 1</option>
-                                    <option>Club 2</option>
-                                    <option>Club 3</option>
-                                    <option>Club 4</option>
-                                </optgroup>
-                                <optgroup label="3a Zona">
-                                    <option>Club 5</option>
-                                    <option>Club 6</option>
-                                    <option>Club 7</option>
-                                    <option>Club 8</option>
-                                </optgroup>
+                                @foreach($clubes as $club)
+                                    <option> {{ $club->NOMBRE }}</option>
+                                @endforeach
                             </select>
                         </div>
                         <div class="form-group">

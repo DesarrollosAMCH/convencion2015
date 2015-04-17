@@ -30,7 +30,10 @@ class WelcomeController extends Controller {
 	 */
 	public function index()
 	{
-		return view('login');
+        $oClub = new \App\Club;
+        $clubes = $oClub::all();
+
+		return view('login', array('clubes'=>$clubes));
 	}
 
 }

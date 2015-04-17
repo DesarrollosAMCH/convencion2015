@@ -54,10 +54,10 @@ return [
 
 		'mysql' => [
 			'driver'    => 'mysql',
-			'host'      => env('DB_HOST', 'localhost'),
-			'database'  => env('DB_DATABASE', 'forge'),
-			'username'  => env('DB_USERNAME', 'forge'),
-			'password'  => env('DB_PASSWORD', ''),
+			'host'      => env('DB_HOST', 'mysql.convencionamch.conquistadoresclub.cl'),
+			'database'  => env('DB_DATABASE', 'convencionamch'),
+			'username'  => env('DB_USERNAME', 'conquisadminx'),
+			'password'  => env('DB_PASSWORD', 'conquis_admin'),
 			'charset'   => 'utf8',
 			'collation' => 'utf8_unicode_ci',
 			'prefix'    => '',
