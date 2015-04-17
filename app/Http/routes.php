@@ -21,7 +21,7 @@ Route::get('activate/{token}/{club}/{email}', 'LoginController@activate2');
 
 Route::get('register', 'LoginController@register');
 
-Route::get('register', function(){
+Route::get('404', function(){
     abort(404);
 });
 
