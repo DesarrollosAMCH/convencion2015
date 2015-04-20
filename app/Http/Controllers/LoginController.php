@@ -29,7 +29,7 @@ class LoginController extends Controller {
         $user->USERNAME = $name;
         $user->PASSWORD = \Hash::make($password);
         $user->CLUB_ID  = $club;
-        $user->TOKEN    = "1234567890";
+        $user->TOKEN    = str_random(150);
 
         if($user->save()){
 
@@ -52,9 +52,9 @@ class LoginController extends Controller {
                     ->to($data['email'], $data['club'])
                     ->subject("Convención 2015 AMCH - ". $data['club']);
             });
-            //$user->ACTIVO  = 1;
-
-            return redirect('/');
+            return redirect('/')->with("message","Se ha enviado un E-Mail al director del club ".$data['club']." para que active el acceso.")
+                ->with("msg",'info')
+                ;
         }
 
 
@@ -77,7 +77,9 @@ class LoginController extends Controller {
             if(count($club) > 0){
                 $updated = \App\User::where('ID', $user[0]->ID)->update(['ACTIVO' => 1]);
                 if($updated > 0){
-                    return redirect('/');
+                    return redirect('/')->with('message', 'El Club '. $club[0]->NOMBRE . ' ha sido activado')
+                        ->with("msg",'success')
+                        ;
                 }else{
                     return redirect('/404');
                 }

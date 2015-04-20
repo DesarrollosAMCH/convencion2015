@@ -40,8 +40,8 @@
             <form class="m-t" role="form" action="/register" method="POST">
                 <div class="form-group">
                     <select class="chosen-select form-control" data-validation="select_club" name="club">
+                        <option value="">Seleccione su Club </option>
                         @foreach($clubes as $club)
-                            <option value="">Seleccione su Club </option>
                             <option value="{{ $club->ID }}"> {{ $club->NOMBRE }}</option>
                         @endforeach
                     </select>
@@ -60,8 +60,8 @@
 
                 <button type="submit" class="btn btn-primary block full-width m-b">Activar</button>
 
-                <p class="text-muted text-center"><small>Already have an account?</small></p>
-                <a class="btn btn-sm btn-white btn-block" href="/">Ir al Acceso</a>
+                <p class="text-muted text-center"><small>Si tu club no aparece, puede deberse a que ya fue activado o a que no está registrado en nuestro campo</small></p>
+                <a class="btn btn-sm btn-white btn-block" href="/">Ir al Inicio</a>
             </form>
             <p class="m-t text-center"> <small>Regional de Conquistadores AMCH &copy; 2015</small> </p>
         </div>

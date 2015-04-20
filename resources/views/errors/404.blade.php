@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>INSPINIA | 404 Error</title>
+    <title>Error 404 | Convención 2015</title>
 
     <link href="/css/back/bootstrap.min.css" rel="stylesheet">
     <link href="/font-awesome/css/font-awesome.css" rel="stylesheet">
@@ -21,15 +21,16 @@
 
     <div class="middle-box text-center animated fadeInDown">
         <h1>404</h1>
-        <h3 class="font-bold">Page Not Found</h3>
+        <h3 class="font-bold">Pagona no encontrada</h3>
 
         <div class="error-desc">
-            Sorry, but the page you are looking for has note been found. Try checking the URL for error, then hit the refresh button on your browser or try found something else in our app.
+            Lo sentimos, pero la pagina que busca no ha sido encontrada. Intenta revisar que la URL no tenga errores.
             <form class="form-inline m-t" role="form">
                 <div class="form-group">
-                    <input type="text" class="form-control" placeholder="Search for page">
+                    <a class="btn btn-primary" href="/">Volver al Inicio</a>
+                    <!--<input type="text" class="form-control" placeholder="Search for page">-->
                 </div>
-                <button type="submit" class="btn btn-primary">Search</button>
+                <!--<button type="submit" class="btn btn-primary">Search</button>-->
             </form>
         </div>
     </div>

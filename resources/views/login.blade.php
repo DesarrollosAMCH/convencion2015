@@ -81,6 +81,14 @@
                         </div>
                         <button type="submit" class="btn btn-primary block full-width m-b">Entrar</button>
 
+                        @if(Session::has('msg'))
+                        <div class="msg align-center">
+                            <p class="bg-{{ Session::get('msg') }}">
+                                {{ Session::get('message') }}
+                            </p>
+                        </div>
+                        @endif
+
                         <div class="msg my_hidden">
                             <p class="bg-warning">
                                 El sistema aún no está disponible
